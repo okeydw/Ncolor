@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools >= 61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ncolor"
+version = "0.1.0"
+description = "Lightweight ANSI color and cursor control for Python"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "LL", email = "netun9825@gmail.com"}]
+requires-python = ">=3.8"
+keywords = ["ansi", "color", "terminal", "cursor", "console"]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Terminals",
+]
+
+
+[project.urls]
+Repository = "https://github.com/okeydw/Ncolor"
+
+[project.optional-dependencies]
+dev = ["black", "pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["ncolor*"]
+
+[tool.setuptools.package-data]
+ncolor = ["py.typed"]
+
+[tool.setuptools.dynamic]
+readme = {file = "README.md"}
+
+[tool.black]
+line-length = 88
