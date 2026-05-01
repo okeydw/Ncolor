@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+
 class Config:
     color = True
     cursor = True
